@@ -1,0 +1,41 @@
+MODEL:
+https://civitai.com/models/79754/reliberate
+LORA margot robbie:
+https://civitai.com/models/59383
+https://civitai.com/models/48139/lowra
+EMBEDDING
+https://civitai.com/models/7808?modelVersionId=9208
+
+
+Prompt
+margotrobbie with blue eyes, <lora:margotrobbie_v2:0.6>, (highly detailed skin: 0.9), posing, sunset, photographic portrait, gorgeous, classy,  <lora:LowRA:0.35>
+
+Negative Prompt
+Light glare on film, light reflected on film, EasyNegative, deformed mouth, (ugly teeth:0.8), (disformed eyes: 0.25), (disformed mouth: 0.8), (ear rings: 0.5)
+
+Model:Reliberate
+Steps: 20, 
+Sampler: Euler a, 
+CFG scale: 3, 
+Denoising strength: 1
+
+Seed: -1
+Size: 576x1024, 
+
+
+ControlNet 0: TILE
+Enable: pixel perfect
+preprocessor: none, 
+model: control_v11f1e_sd15_tile
+control weight: 1 
+starting/ending: (0, 1), 
+Control mode:ControlNet is more important 
+
+ControlNet 1: temporalnet
+preprocessor: none
+model:  control_v11p_sd15_temporalnet
+control weight: 1 
+starting/ending: (0, 1), 
+Control mode:ControlNet is more important 
+
+
